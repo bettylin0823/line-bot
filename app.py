@@ -46,9 +46,9 @@ def handle_message(event):
         r = '還沒呢'
     elif msg == '你是誰':
         r = 'I am your robot. Ready for serving.'
-    elif msg in '訂位':
+    elif '訂位' in msg:
         r = 'You wanna order, right?'
-        
+
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=r))
